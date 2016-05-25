@@ -1,10 +1,10 @@
-﻿/*
+/*
  * Author: Ina Carter
  * Programming Challenge
  * BTree: finding common parent with ASCII Display
  * The main program creates queue from 1-17 and creates a binary tree using the binary tree class I made in this project. 
- * Nodes are oganized in level order from top to bottom. 
- * The user is prompted for two nodes and the closest common parent of these two nodes is found in that binary tree.
+ * This queue is then used to create a binary tree using level order tree traversal type algorithm. The user is prompted 
+ * for two nodes and the closest common parent of these two nodes is found in that binary tree.
  * The binary tree is then represented in the console using ascii characters and colors to denote the special nodes.
  * Main Program Below.
  * 5/25/2016
@@ -40,13 +40,14 @@ namespace TreeTraversal
  
 
             do{
-                //Display tree
+                //Create a queue from the tree
                 nodeQueue = BFEnqueue(tree.root, temp, nodeQueue);
+                //Display the tree to the Console
                 Program.display(nodeQueue, n01, n02, 0);
                 Console.WriteLine();
                 Console.WriteLine();
 
-                //Prompt user
+                //Prompt user for input
                 Console.Write("Type in an integer key for Node 1 and hit enter. (Pick between 1-15 for an easy to read graph).\n");
                 n01.key = Convert.ToInt32(Console.ReadLine()); //collect input
                 Console.Write("Type in an integer key for Node 2 and hit enter. (Pick between 1-15 for an easy to read graph).\n");           
@@ -54,10 +55,10 @@ namespace TreeTraversal
                 Console.Clear();
 
 
-                //Call ParentFinder Function
+                //Find closest parent both nodes have in common
                 ParentFinder(tree, n01, n02);
                 Console.WriteLine();
-                //reset keys
+                //reset key values for the temp nodes
                 n01.key = 0;
                 n02.key = 0;
 
