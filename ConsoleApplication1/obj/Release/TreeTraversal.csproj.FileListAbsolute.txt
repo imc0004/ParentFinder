@@ -3,3 +3,4 @@ C:\Users\Ina\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleAp
 C:\Users\Ina\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
 C:\Users\Ina\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
 C:\Users\Ina\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\Ina\Documents\Visual Studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Release\TreeTraversal.csprojResolveAssemblyReference.cache

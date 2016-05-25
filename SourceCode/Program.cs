@@ -31,22 +31,37 @@ namespace TreeTraversal
                 nodeQueue.Enqueue(i);
             }
 
+            //initialize variables and construct tree
             BTree tree = new BTree();
             Queue temp = new Queue(); 
             tree.constructTree(tree, nodeQueue.Count+1, temp, nodeQueue);
+            Node n01 = new Node();
+            Node n02 = new Node();
+ 
 
             do{
-                Console.Write("Type in an integer key for Node 1 and hit enter. (Pick between 1-15 for a readable graphical representation).\n");
+                //Display tree
+                nodeQueue = BFEnqueue(tree.root, temp, nodeQueue);
+                Program.display(nodeQueue, n01, n02, 0);
+                Console.WriteLine();
+                Console.WriteLine();
 
-                Node n01 = new Node();
-                n01.key = Convert.ToInt32(Console.ReadLine());
+                //Prompt user
+                Console.Write("Type in an integer key for Node 1 and hit enter. (Pick between 1-15 for an easy to read graph).\n");
+                n01.key = Convert.ToInt32(Console.ReadLine()); //collect input
+                Console.Write("Type in an integer key for Node 2 and hit enter. (Pick between 1-15 for an easy to read graph).\n");           
+                n02.key = Convert.ToInt32(Console.ReadLine()); //collect input
+                Console.Clear();
 
-                Console.Write("Type in an integer key for Node 2 and hit enter. (Pick between 1-15 for a readable graphical representation).\n");
-                Node n02 = new Node();
-                n02.key = Convert.ToInt32(Console.ReadLine());
 
+                //Call ParentFinder Function
                 ParentFinder(tree, n01, n02);
                 Console.WriteLine();
+                //reset keys
+                n01.key = 0;
+                n02.key = 0;
+
+                //Ask if user wishes to continue
                 Console.Write("If you wish to try another set of nodes then type 'yes'.");
                 Console.WriteLine();
                     if(Console.ReadLine()=="yes")
@@ -127,7 +142,8 @@ namespace TreeTraversal
         /// <param name="node"></param>
         /// <param name="temp"></param>
         /// <param name="treeQ"></param>
-        /// <returns="treeQ"></returns>
+        /// <returns>"Queue"</returns>
+
         public static Queue BFEnqueue(Node node, Queue temp, Queue treeQ)
         {            
             if (treeQ.Count == 0)
