@@ -2,11 +2,11 @@
  * Author: Ina Carter
  * Programming Challenge
  * BTree: finding common parent with ASCII Display
- * The main program takes a file with a series of comma or space delimited numbers and pushes each onto a queue
+ * The main program creates queue from 1-17 and creates a binary tree using the binary tree class I made in this project. 
  * This queue is then used to create a binary tree using level order tree traversal type algorithm. 
- * The closest common parent of these two nodes is found in that binary tree. 
+ * The user is prompted for two nodes and the closest common parent of these two nodes is found in that binary tree.
  * The binary tree is then represented in the console using ascii characters and colors to denote the special nodes.
- * Btree Class and Node Class
+ * Main Program Below.
  * 5/25/2016
  */
 
